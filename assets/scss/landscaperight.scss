@@ -1,0 +1,553 @@
+/* Place your CSS here. This is ready for SCSS features if needed. */
+// ... existing code ... 
+
+/* ===============================
+   RESET & GLOBAL
+=============================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body {
+    width: 100vw;
+    min-width: 100vw;
+    height: 100%;
+    font-family: 'DM Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  body {
+    min-height: 100dvh;
+    min-height: 100vh;
+  }
+  
+  /* ===============================
+     MAIN CONTAINER (Desktop Layout)
+  =============================== */
+  .container {
+    display: grid;
+    grid-template-columns: 1.2fr 1.8fr;
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(67.75deg, #FFFFFF 19.18%, #FFEBE7 75.31%);
+    align-items: stretch;
+    justify-content: stretch;
+    overflow: hidden;
+    max-width: none;
+  }
+  
+  /* ===============================
+     LEFT PANEL (Desktop ≥ 992px)
+  =============================== */
+  .left-panel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    min-height: 96vh;
+    margin: 5px;
+    padding: 0 24px;
+    box-sizing: border-box;
+  }
+  .introduction {
+    position: relative;
+    width: 100%;
+    border-radius: 32px;
+    padding: 40px 24px;
+    gap: 600px; /* adjust as needed */
+    isolation: isolate;
+    display: grid;
+    margin: 0 auto;
+    overflow: hidden;
+    grid-template-rows: auto 1fr;
+    background: url('../images/background.png') center/cover no-repeat;
+    height: au;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 100%;
+    box-sizing: border-box;
+  }
+  /* Overlays */
+  .bg1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #FF5634;
+    opacity: 0.5;
+    border-radius: 32px;
+    z-index: 0;
+  }
+  .bg2 {
+    position: absolute;
+    top: 516px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, #000000 50%, #000000 100%);
+    opacity: 0.5;
+    border-radius: 32px;
+    z-index: 1;
+  }
+  /* Logo/Type4 */
+  .logo-type4 {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    padding: 12px;
+    gap: 6px;
+    width: 168px;
+    height: 59px;
+    z-index: 2;
+  }
+  /* Intro Content */
+  .intro-content {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    gap: 24px;
+    width: 100%;
+    height: auto;
+    z-index: 3;
+  }
+  .big-title {
+    width: 100%;
+    font-weight: 700;
+    font-size: clamp(1.2rem, 4vw, 3.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+    word-break: break-word;
+    hyphens: auto;
+    white-space: normal;
+    text-align: left;
+  }
+  @media (max-width: 600px) {
+    .big-title {
+      font-size: 1.5rem;
+      text-align: left;
+    }
+  }
+  .description {
+    width: 100%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -1%;
+    color: #FFFFFF;
+  }
+  
+  /* ===============================
+     RIGHT PANEL: Sign In Form
+  =============================== */
+  .right-panel {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    overflow: auto;
+  }
+  .sign-up-form {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  /* Heading Block */
+  .heading-block {
+    display: grid;
+    gap: 24px;
+    width: 100%;
+    justify-items: center;
+  }
+  .heading {
+    display: grid;
+    gap: 8px;
+    width: 100%;
+    justify-items: center;
+  }
+  .headline {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: -0.03em;
+    color: #000000;
+  }
+  .subhead {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: -0.01em;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  /* Form Inputs */
+  .form-inputs {
+    display: grid;
+    gap: 16px;
+    width: 100%;
+  }
+  .standard-input {
+    display: grid;
+    grid-template-rows: 16px 48px;
+    gap: 8px;
+    width: 100%;
+  }
+  .input-label {
+    padding: 0 16px;
+    display: grid;
+    align-items: start;
+  }
+  .label-text {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .text-field {
+    position: relative;
+    display: grid;
+    width: 100%;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 24px;
+    padding: 0 16px;
+    align-items: center;
+  }
+  .input-content {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+  }
+  .value {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 16px;
+    color: #000;
+    line-height: 48px; /* center placeholder text vertically */
+    padding-right: 40px; /* space for the eye icon */
+  }
+  /* Eye Icon */
+  .icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    filter: grayscale(1) brightness(0.4);
+  }
+  /* Row Below: Checkbox + Link */
+  .row-below {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    height: 48px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .checkbox-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    margin-left: -38px; /* optional offset */
+  }
+  /* Custom Checkbox */
+  .checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+  .checkbox-wrapper input.checkbox-control {
+    opacity: 0;
+    width: 28px;
+    height: 28px;
+    margin: 0;
+    appearance: none;
+    cursor: pointer;
+  }
+  .checkbox-symbol {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    pointer-events: none; /* allow clicks to fall through */
+  }
+  .checkbox-symbol::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #000;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.2s;
+    left: 4px;
+    top: 4px;
+  }
+  .checkbox-wrapper input.checkbox-control:checked + .checkbox-symbol::before {
+    opacity: 1;
+  }
+  .check-text {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.01em;
+    color: #000;
+    cursor: pointer;
+  }
+  /* Simple Button (Login with Code) */
+  .simple-btn {
+    display: grid;
+    place-items: center;
+    width: auto;
+    height: 48px;
+  }
+  .simple-button {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: underline;
+    color: #000;
+    cursor: pointer;
+  }
+  /* Sign In Button */
+  .medium-btn {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 48px;
+    background: #000;
+    border-radius: 32px;
+    cursor: pointer;
+    border: none;
+  }
+  .text-button {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #fff;
+  }
+  
+  /* 
+    TABLET-ONLY SECTION:
+    (768px <= width < 992px)
+    - Hide the entire left panel
+    - Show the gradient background on .right-panel
+    - Show the new top logo + "Service Panel"
+  */
+  @media (max-width: 991.98px) {
+    /* Hide left panel entirely */
+    .left-panel {
+      display: none;
+    }
+    .container {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      grid-template-columns: 1fr; 
+  
+    }
+    .right-panel {
+      position: relative;
+      width: 100%;  /* match your Figma width */
+      min-height: 1194px;
+      margin: 0 auto;
+      background: linear-gradient(33.85deg, #FDE8E4 37.88%, #ECECEC 73.61%);
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      justify-content: flex-start; /* top alignment */
+      align-items: center;         /* center horizontally */
+    }
+    /* Tablet top section (logo + "Service Panel") */
+    .tablet-top-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 24px; /* adjust spacing from top */
+      gap: 8px;
+      width: 100%;
+    }
+    .tablet-logo-wrap {
+      
+      display: flex;
+      justify-content: center;
+      white-space: nowrap;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 32px;
+      letter-spacing: -2%;
+      align-items: center;
+      gap: 8px;
+    }
+    .tablet-logo-text {
+      color: #FF5634;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 32px;
+      letter-spacing: -0.02em;  /* or your preferred spacing */
+      white-space: nowrap;      /* keeps "Orderific" on one line */
+    }
+    .tablet-logo {
+      width: 56px;
+      height: 56px;
+      border-radius: 128px; /* if needed */
+      display: flex;
+      justify-content: start;
+      white-space: nowrap;
+    }
+    .tablet-service-panel {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 40px;
+      letter-spacing: -3%;
+      color: #000; /* or #000 if you prefer black */
+    }
+  
+  
+    /* The sign-up form block: center it below the top section */
+    .sign-up-form {
+      margin-top: 400px; /* add some spacing if needed */
+      width: 360px;
+      height: 404px;
+    }
+  }
+  
+  /* 
+    HIDE the tablet-only top section for widths ≥ 992px
+    so it doesn't appear on desktop 
+  */
+  @media (min-width: 992px) {
+    .tablet-top-section {
+      display: none !important;
+    }
+  } 
+
+.social-login-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+.iconic-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px 8px 12px;
+  gap: 4px;
+  width: 100%;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(26, 26, 26, 0.1);
+  border-radius: 48px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #1A1A1A;
+  transition: background 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+.iconic-btn:hover {
+  background: rgba(255,255,255,0.4);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.social-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+.social-text {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #1A1A1A;
+}
+@media (max-width: 991.98px) {
+  .social-login-group {
+    width: 100%;
+  }
+  .iconic-btn {
+    width: 100%;
+    min-width: 0;
+  }
+} 
+
+.separator {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: 8px;
+  margin: 16px 0;
+}
+.separator .line {
+  flex: 1;
+  height: 0;
+  border-top: 1px solid rgba(26, 26, 26, 0.1);
+}
+.separator .or-text {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: rgba(26, 26, 26, 0.4);
+  padding: 0 8px;
+  white-space: nowrap;
+}
+
+.signup-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  margin-top: 16px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  line-height: 16px;
+  color: rgba(26, 26, 26, 0.4);
+}
+.signup-link .sign-up-link {
+  font-weight: 700;
+  color: #1A1A1A;
+  text-decoration: underline;
+  cursor: pointer;
+} 
+
+.simple-separator {
+  border-top: 1px solid rgba(26, 26, 26, 0.1);
+  margin: 24px 0 0 0;
+  height: 0;
+  width: 100%;
+} 
