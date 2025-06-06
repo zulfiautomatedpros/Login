@@ -1,5 +1,8 @@
-/* Place your CSS here. This is ready for SCSS features if needed. */
-// ... existing code ... 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Custom left-panel styles (if any, otherwise leave empty)
 
 /* ===============================
    RESET & GLOBAL
@@ -52,7 +55,9 @@
     min-width: 0;
     min-height: 96vh;
     margin: 5px;
-    padding: 0 24px;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-bottom: 40px;
     box-sizing: border-box;
   }
   .introduction {
@@ -67,7 +72,7 @@
     overflow: hidden;
     grid-template-rows: auto 1fr;
     background: url('../images/background.png') center/cover no-repeat;
-    height: au;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
