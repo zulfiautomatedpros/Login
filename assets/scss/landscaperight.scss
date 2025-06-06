@@ -61,11 +61,10 @@
     position: relative;
     width: 100%;
     border-radius: 32px;
-    padding: 40px 24px;
-    gap: 600px; /* adjust as needed */
+    padding: 40px;
     isolation: isolate;
     display: grid;
-    margin: 0 auto;
+    margin: 24px;
     overflow: hidden;
     grid-template-rows: auto 1fr;
     background: url('../images/background.png') center/cover no-repeat;
@@ -115,11 +114,12 @@
   .intro-content {
     position: relative;
     display: grid;
-    justify-items: center;
+    justify-items: start;
     gap: 24px;
     width: 100%;
     height: auto;
     z-index: 3;
+    padding: 40px;
   }
   .big-title {
     width: 100%;
@@ -552,4 +552,45 @@
   margin: 24px 0 0 0;
   height: 0;
   width: 100%;
+} 
+
+/* Left Panel Styles */
+.hidden.lg\:flex {
+  margin: 24px !important;
+  padding: 40px !important;
+  background-size: cover;
+  background-position: center;
+  
+  /* Content wrapper */
+  > div.relative {
+    padding: 40px;
+    z-index: 20;
+    
+    h1 {
+      margin-bottom: 24px;
+    }
+    
+    p {
+      max-width: 90%;
+    }
+  }
+  
+  /* Logo wrapper */
+  > div.absolute.top-10 {
+    padding: 40px;
+  }
+}
+
+/* Ensure overlays cover the entire panel */
+.absolute.inset-0 {
+  border-radius: 32px;
+  
+  &.bg-\[\#FF5634\] {
+    opacity: 0.5;
+  }
+  
+  &.z-10 {
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, #000000 50%, #000000 100%);
+    opacity: 0.5;
+  }
 } 

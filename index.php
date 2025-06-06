@@ -34,11 +34,11 @@
       </div>
       <!-- Social Login Buttons -->
       <div class="space-y-4 mb-8">
-        <button type="button" class="w-full flex items-center justify-center px-4 h-12 border border-gray-300 rounded-[32px] bg-white font-semibold text-black text-base hover:bg-gray-50 transition-colors">
+        <button type="button" class="w-full flex items-center justify-center px-4 h-12 border border-gray-300 rounded-[32px] bg-white/20 font-semibold text-black text-base hover:bg-gray-50 transition-colors">
           <img src="assets/images/google.webp" alt="Google" class="w-5 h-5 mr-3" />
           <span>Continue with Google</span>
         </button>
-        <button type="button" class="w-full flex items-center justify-center px-4 h-12 border border-gray-300 rounded-[32px] bg-white font-semibold text-black text-base hover:bg-gray-50 transition-colors">
+        <button type="button" class="w-full flex items-center justify-center px-4 h-12 border border-gray-300 rounded-[32px] bg-white/20 font-semibold text-black text-base hover:bg-gray-50 transition-colors">
           <img src="assets/images/facebook.webp" alt="Facebook" class="w-5 h-5 mr-3" />
           <span>Continue with FB</span>
         </button>
