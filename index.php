@@ -27,13 +27,13 @@
     <div class="block lg:hidden top-0 z-30 w-full flex justify-center bg-[linear-gradient(67.75deg,_#FFFFFF_19.18%,_#FFEBE7_75.31%)] pt-8 pb-2">
       <img src="assets/images/logo.webp" alt="Orderific Logo" class="h-14 w-auto" />
     </div>
-    <div class="w-full max-w-[400px] mx-auto px-0 pt-4 lg:pt-0 flex flex-col items-center">
-      <div class="text-center mb-8 w-full">
+    <div class="w-full max-w-[400px] mx-auto px-4 sm:px-0 pt-4 lg:pt-0">
+      <div class="text-center mb-8">
         <h2 class="text-3xl font-bold text-black mb-2">Welcome Back</h2>
         <p class="text-gray-600">Manage, streamline, and thrive effortlessly.</p>
       </div>
       <!-- Social Login Buttons -->
-      <div class="space-y-4 mb-8 w-full">
+      <div class="space-y-4 mb-8">
         <button type="button" class="w-full flex items-center justify-center px-4 h-12 border border-gray-300 rounded-[32px] bg-white font-semibold text-black text-base hover:bg-gray-50 transition-colors">
           <img src="assets/images/google.webp" alt="Google" class="w-5 h-5 mr-3" />
           <span>Continue with Google</span>
@@ -44,31 +44,21 @@
         </button>
       </div>
       <!-- Separator with OR -->
-      <div class="relative flex items-center justify-center mb-8 w-full">
+      <div class="relative flex items-center justify-center mb-8">
         <div class="flex-1 border-t border-gray-300"></div>
         <span class="px-4 text-sm text-gray-500">Or</span>
         <div class="flex-1 border-t border-gray-300"></div>
       </div>
-      <form class="space-y-6 w-full" action="#" method="POST">
-        <div class="flex flex-col items-start p-0 gap-2 w-full h-[72px] self-stretch">
-          <div class="flex flex-row items-start px-4 gap-2 w-full h-4 self-stretch">
-            <label for="email" class="font-bold font-['DM_Sans'] text-[13px] leading-4 text-[rgba(26,26,26,0.6)] w-full h-4 flex-grow">Email</label>
-          </div>
-          <div class="flex flex-row items-center p-0 gap-1 w-full h-12 bg-[rgba(255,255,255,0.6)] border border-[rgba(26,26,26,0.1)] rounded-[24px] self-stretch">
-            <div class="flex flex-col justify-center items-start px-4 w-full h-12 flex-grow">
-              <input id="email" name="email" type="email" class="w-full h-5 font-normal font-['DM_Sans'] text-base leading-5 tracking-[-0.01em] text-[#1A1A1A] bg-transparent border-none outline-none" placeholder="samsmith@gmail.com" required />
-            </div>
-          </div>
+      <form class="space-y-6" action="#" method="POST">
+        <div>
+          <label for="email" class="font-bold text-[13px] leading-[16px] text-[rgba(26,26,26,0.6)] mb-1 ml-1 text-left">Email</label>
+          <input id="email" name="email" type="email" class="form-input rounded-[32px] h-12 px-5 border border-gray-300 text-base font-normal bg-white focus:ring-2 focus:ring-[#FF5634] focus:border-[#FF5634]" placeholder="samsmith@gmail.com" required />
         </div>
-        <div class="flex flex-col items-start p-0 gap-2 w-full h-[72px] self-stretch">
-          <div class="flex flex-row items-start px-4 gap-2 w-full h-4 self-stretch">
-            <label for="password" class="font-bold font-['DM_Sans'] text-[13px] leading-4 text-[rgba(26,26,26,0.6)] w-full h-4 flex-grow">Password</label>
-          </div>
-          <div class="flex flex-row items-center p-0 gap-1 w-full h-12 bg-[rgba(255,255,255,0.6)] border border-[rgba(26,26,26,0.1)] rounded-[24px] self-stretch relative">
-            <div class="flex flex-col justify-center items-start px-4 w-full h-12 flex-grow">
-              <input id="password" name="password" type="password" class="w-full h-5 font-normal font-['DM_Sans'] text-base leading-5 tracking-[-0.01em] text-[#1A1A1A] bg-transparent border-none outline-none" placeholder="Password" required />
-            </div>
-            <button type="button" class="absolute right-4 top-1/2 -translate-y-1/2 flex items-center">
+        <div>
+          <label for="password" class="font-bold text-[13px] leading-[16px] text-[rgba(26,26,26,0.6)] mb-1 ml-1 text-left">Password</label>
+          <div class="relative">
+            <input id="password" name="password" type="password" class="form-input rounded-[32px] h-12 px-5 border border-gray-300 text-base font-normal bg-white focus:ring-2 focus:ring-[#FF5634] focus:border-[#FF5634] pr-10" placeholder="Password" required />
+            <button type="button" class="absolute inset-y-0 right-0 pr-3 flex items-center">
               <img src="assets/images/close-eye.webp" alt="Toggle Password" class="w-5 h-5" />
             </button>
           </div>
